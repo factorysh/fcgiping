@@ -11,13 +11,13 @@ import (
 )
 
 func main() {
-	err := Get(os.Args[1])
+	err := get(os.Args[1])
 	if err != nil {
 		panic(err)
 	}
 }
 
-func Get(addr string) error {
+func get(addr string) error {
 	u, err := url.Parse(addr)
 	if err != nil {
 		return err
